@@ -1,4 +1,8 @@
 <?php
+session_start();
+if(isset($_SESSION['password'])) {
+// ----------------------------------CONTENT HERE---------------------------------- //
+
 include_once('config.php');
 
 // routeros api
@@ -213,7 +217,9 @@ foreach($gethotspotactive as $hotspotactive){
 ?>
 
 </div>
-
+<center>
+<a href="logout.php" class="btn btn-danger">Keluar</a>
+</center>
 </body>
 <script src="https://cdn.datatables.net/1.13.3/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.13.3/js/dataTables.bootstrap.min.js"></script>
@@ -225,3 +231,11 @@ foreach($gethotspotactive as $hotspotactive){
 </script>
 
 </html>
+<?php
+    // echo '<center><h1>Selamat Datang ;)</h1><br/><a href="./logout.php">Logout</a>';
+    // ----------------------------------CONTENT HERE---------------------------------- //
+    } else {
+        echo '<script>window.location.replace("./login.php");</script>';
+    }
+
+?>

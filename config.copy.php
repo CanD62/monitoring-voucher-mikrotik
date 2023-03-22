@@ -14,4 +14,4 @@ $hotspotname = 'NaWa.NET';
 $prof = 'unl-6jam-2000';
 
 
-
+$token = '****';
