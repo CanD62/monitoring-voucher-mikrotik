@@ -125,8 +125,8 @@ body, html {
 }
 
 .btn.btn-signin {
-    /*background-color: #4d90fe; */
-    background-color: rgb(104, 145, 162);
+    background-color: #4d90fe;
+    /* background-color: rgb(104, 145, 162); */
     /* background-color: linear-gradient(rgb(104, 145, 162), rgb(12, 97, 33));*/
     padding: 0px;
     font-weight: 700;
@@ -145,7 +145,7 @@ body, html {
 .btn.btn-signin:hover,
 .btn.btn-signin:active,
 .btn.btn-signin:focus {
-    background-color: rgb(12, 97, 33);
+    background-color: rgb(104, 145, 162);
 }
 
 .forgot-password {
@@ -167,7 +167,7 @@ body, html {
             <form class="form-signin" action="cek_login.php" method="post">
                 <span id="reauth-email" class="reauth-email"></span>
                 <!-- <input type="username" id="username" class="form-control" placeholder="Nama Pengguna" required autofocus> -->
-                <input type="password" id="inputPassword" class="form-control" name="password" placeholder="Akses Token" required>
+                <input type="password" id="inputPassword" autocomplete="off" autofocus="true" class="form-control" name="password" placeholder="Akses Token" required>
                 <!-- <div id="remember" class="checkbox">
                     <label>
                         <input type="checkbox" value="remember-me"> Remember me
