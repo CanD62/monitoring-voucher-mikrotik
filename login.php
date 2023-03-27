@@ -197,6 +197,10 @@ body, html {
     loadProfile();
 });
 
+// var input1 = document.getElementById('inputPassword');
+$('#inputPassword').keyup(function(){
+    this.value = this.value.toLowerCase();
+});
 /**
  * Function that gets the data of the profile in case
  * thar it has already saved in localstorage. Only the
