@@ -1,0 +1,22 @@
+# version: '3'
+# services:
+# 	php:
+# 		build: .
+# 		ports:
+# 			- 8888:80
+# 		volumes:
+# 			- ./:/var/www/html
+
+version: '2'
+services:
+  php:
+    container_name: mk-app
+    image: mk1
+    user: "${UID}:${GID}"
+    restart: always
+    network_mode: bridge
+    # user: 1000
+    volumes:
+      - ./:/var/www/html/
+    ports:
+      - 8089:80
